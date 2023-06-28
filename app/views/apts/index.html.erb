@@ -1,0 +1,21 @@
+<%= cl_image_tag("boris_retreat_2017.jpg",
+      width: 400, height: 300, crop: :fill) %>
+<ul>
+<% @apts.each do |ap|  %>
+  <li>
+    <%# <div class="card-trip" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path ap.photo.key %>')"> %>
+    <%# <img url=(' <%=cl_image_tag ap.photo.key') /> %>
+      <%# <%=cl_image_tag ap.photo.key %> %>
+      <div class="card-trip-infos">
+          <div>
+            <h2><%= ap.title %></h2>
+            <p><%= ap.address %></p>
+          </div>
+          <h2 class="card-trip-pricing"> <%= ap.price %></h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+    </div>
+  </li>
+<% end %>
+
+</ul>

@@ -6,7 +6,6 @@ class AptsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -31,7 +30,7 @@ class AptsController < ApplicationController
   private
 
   def apt_params
-    params.require(:apt).permit(:name, :address, :price)
+    params.require(:apt).permit(:name, :address, :price, :photo)
   end
 
   def set_apt
